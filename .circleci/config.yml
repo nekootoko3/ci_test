@@ -4,6 +4,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      - GOPATH: /go
     docker:
       # specify the version
       - image: circleci/golang:1.9
@@ -17,7 +19,7 @@ jobs:
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
     ####   /go/src/bitbucket.org/circleci/go-tool
-    working_directory: /go/src/github.com/nekootoko3/easy_calculator
+    working_directory: /go/src/app
     steps:
       - checkout
 
