@@ -6,8 +6,8 @@ import (
 	"io"
 	"strconv"
 
-	"../aa"
-	"../calculator"
+	"app/aa"
+	"app/calculator"
 )
 
 const PROMPT = ">> "
