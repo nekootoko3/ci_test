@@ -16,9 +16,28 @@ func TestAdd(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		result := Add(tt.left, tt.right)
-		if result != tt.expected {
-			t.Errorf("%d is expected. got=%d", tt.expected, result)
+		sum := Add(tt.left, tt.right)
+		if sum != tt.expected {
+			t.Errorf("%d is expected. got=%d", tt.expected, sum)
+		}
+	}
+}
+
+func TestSubstract(t *testing.T) {
+	tests := []struct {
+		left     int
+		right    int
+		expected int
+	}{
+		{10, 1, 9},
+		{0, 0, 0},
+		{-4, -1, -3},
+	}
+
+	for _, tt := range tests {
+		diff := Substract(tt.left, tt.right)
+		if diff != tt.expected {
+			t.Errorf("%d is expected. got=%d", tt.expected, diff)
 		}
 	}
 }
