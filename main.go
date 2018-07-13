@@ -9,6 +9,8 @@ import (
 	"./calculator"
 )
 
+const PROMPT = ">> "
+
 func main() {
 	fmt.Print("This is easy calculator\n")
 	scanner := bufio.NewScanner(os.Stdin)
@@ -17,6 +19,7 @@ func main() {
 		fmt.Print("----- Let's calculate -----\n")
 
 		fmt.Print("Please input int\n")
+        fmt.Printf(PROMPT)
 		ls := scanner.Scan()
 		if !ls {
 			return
@@ -27,6 +30,7 @@ func main() {
 		}
 
 		fmt.Printf("Please input operator ( + or -)\n")
+        fmt.Printf(PROMPT)
 		os := scanner.Scan()
 		if !os {
 			return
@@ -34,6 +38,7 @@ func main() {
 		operator := scanner.Text()
 
 		fmt.Printf("Please input int\n")
+        fmt.Printf(PROMPT)
 		rs := scanner.Scan()
 		if !rs {
 			return
@@ -54,5 +59,7 @@ func main() {
 		default:
 			fmt.Printf("Invalid operator. got=%s\n", operator)
 		}
+
+        fmt.Print("\n");
 	}
 }
