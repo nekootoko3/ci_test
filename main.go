@@ -14,7 +14,9 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	for {
-		fmt.Print("please input int\n")
+		fmt.Print("----- Let's calculate -----\n")
+
+		fmt.Print("Please input int\n")
 		ls := scanner.Scan()
 		if !ls {
 			return
@@ -45,13 +47,12 @@ func main() {
 		switch operator {
 		case "+":
 			sum := calculator.Add(left, right)
-			fmt.Printf("sum is %d\n", sum)
+			fmt.Printf("Sum is %d\n", sum)
 		case "-":
 			diff := calculator.Substract(left, right)
-			fmt.Printf("diff is %d\n", diff)
+			fmt.Printf("Diff is %d\n", diff)
 		default:
-			fmt.Printf("invalid operator. got=%s\n", operator)
+			fmt.Printf("Invalid operator. got=%s\n", operator)
 		}
-		fmt.Print("----- next calculation -----\n")
 	}
 }
