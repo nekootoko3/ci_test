@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"app/repl"
+	"easy_calculator/repl"
 )
 
 const PROMPT = ">> "
